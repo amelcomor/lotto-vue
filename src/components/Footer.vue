@@ -55,7 +55,7 @@ export default {
     ])
   },
   created() {
-    console.log("FOOTER CREATED");
+    console.log("footer created");
     let tempBalls = this.resultsInProgress ? this.results : this.balls;
 
     this.initData();
@@ -103,7 +103,6 @@ export default {
   },
   watch: {
     currentBall() {
-      console.log("FOOTER CHANGED");
       if (this.countdownInProgress) {
         this.initData();
       } else {
@@ -128,6 +127,9 @@ export default {
           }
         }
       }
+    },
+    countdownInProgress() {
+      this.initData();
     }
   }
 };
