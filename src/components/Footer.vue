@@ -55,7 +55,6 @@ export default {
     ])
   },
   created() {
-    console.log("footer created");
     let tempBalls = this.resultsInProgress ? this.results : this.balls;
 
     this.initData();

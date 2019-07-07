@@ -125,7 +125,6 @@ export default new Vuex.Store({
         socketData.type == 'state' ? socketData.data.type : socketData.type;
       switch (type) {
         case 'countdown':
-          console.log('CASE COUNTDOWN', socketData.data);
           commit('SET_ROUND_IN_PROGRESS', false);
           commit('SET_RESULTS_IN_PROGRESS', false);
           if (isState) {
@@ -141,7 +140,6 @@ export default new Vuex.Store({
           }
           break;
         case 'ball':
-          console.log('CASE BALL', socketData.data);
           commit('SET_WAITING_FOR_ROUND', false);
           commit('SET_ROUND_STARTING', false);
           if (isState) {
@@ -164,7 +162,6 @@ export default new Vuex.Store({
           commit('SET_ROUND_IN_PROGRESS', true);
           break;
         case 'new':
-          console.log('CASE NEW', socketData.data);
           commit('SET_COUNTDOWN_IN_PROGRESS', false);
           commit('SET_WAITING_FOR_ROUND', false);
           commit('SET_ROUND_IN_PROGRESS', false);
@@ -182,7 +179,6 @@ export default new Vuex.Store({
           commit('SET_ROUND_STARTING', true);
           break;
         case 'results':
-          console.log('CASE RESULTS', socketData.data);
           commit('SET_COUNTDOWN_IN_PROGRESS', false);
           commit('SET_WAITING_FOR_ROUND', false);
           commit('SET_ROUND_IN_PROGRESS', false);
