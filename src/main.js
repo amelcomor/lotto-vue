@@ -12,7 +12,6 @@ Vue.use(VueProgress);
 
 Vue.use(
   new VueSocketIO({
-    debug: true,
     connection: io('https://gcm-fra-staging-2.7platform.com:8008', {
       query: 'token="token"&clientType="user"'
     }),

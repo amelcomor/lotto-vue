@@ -10,7 +10,7 @@
           v-if="roundInProgress || resultsInProgress || waitingForRound || roundStarting"
           :windowWidth="windowWidth"
         />
-        <Countdown :windowWidth="windowWidth" v-if="countdownInProgress" />
+        <Countdown :windowWidth="windowWidth" v-if="countdownInProgress"/>
       </div>
       <Footer />
     </div>
