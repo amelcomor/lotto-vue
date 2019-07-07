@@ -83,17 +83,6 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .vue-progress-path path {
-  stroke-width: 4 !important;
-}
-
-.vue-progress-path .progress {
-  stroke: white !important;
-}
-
-.vue-progress-path .background {
-  stroke: #6899de !important;
-}
   }
 
   @media screen and (max-width: 400px) {

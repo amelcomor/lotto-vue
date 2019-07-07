@@ -10,7 +10,7 @@
           v-if="roundInProgress || resultsInProgress || waitingForRound || roundStarting"
           :windowWidth="windowWidth"
         />
-        <Countdown :windowWidth="windowWidth" v-if="countdownInProgress"/>
+        <Countdown :windowWidth="windowWidth" v-if="countdownInProgress" />
       </div>
       <Footer />
     </div>
@@ -79,6 +79,17 @@ export default {
 <style lang="scss">
 @import "src/assets/scss/reset.scss";
 @import "src/assets/scss/fonts.scss";
+.vue-progress-path path {
+  stroke-width: 4 !important;
+}
+
+.vue-progress-path .progress {
+  stroke: white !important;
+}
+
+.vue-progress-path .background {
+  stroke: #6899de !important;
+}
 .wrapper {
   height: 100vh;
   min-width: 100%;
